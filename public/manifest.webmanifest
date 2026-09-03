@@ -1,0 +1,18 @@
+{
+  "name": "Museum Wiki",
+  "short_name": "Museum Wiki",
+  "description": "Internes Wissenssystem für Fehlerbehebungen und Anleitungen zu Stationen und Anlagen im Museum.",
+  "start_url": "/DFM-Wiki/",
+  "scope": "/DFM-Wiki/",
+  "display": "standalone",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    {
+      "src": "/DFM-Wiki/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

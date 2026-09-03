@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Museum Wiki</title>
+    <script type="text/javascript">
+      // Leitet direkte Aufrufe (z.B. von einem gescannten QR-Code) zur
+      // eigentlichen App weiter, damit React Router die Adresse übernehmen kann.
+      // Lösung nach: https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 1; // Anzahl Pfad-Teile des Repository-Namens (hier: "DFM-Wiki")
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
